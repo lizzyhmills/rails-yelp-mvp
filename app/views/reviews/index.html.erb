@@ -1,9 +1,10 @@
 <h1>Reviews</h1>
 
 <ul>
-  <% @reviews.each do |review| %>
+  <% @restaurant.reviews.each do |review| %>
   <li><%= review.content %></li>
   <% end %>
 </ul>
 
 <%= link_to "Add a new review", new_restaurant_review_path %>
+<%= link_to "Back to restaurant", restaurant_path([params[:restaurant_id]]) %>
