@@ -1,0 +1,10 @@
+<h1><%= "#{@restaurant.name}" %></h1>
+
+<ul>
+  <li> <%= "Address: #{@restaurant.address}" %></li>
+  <li> <%= "Category: #{@restaurant.category.capitalize}" %></li>
+</ul>
+
+<%= link_to "See all reviews",   restaurant_reviews_path(@restaurant) %>
+<%= link_to "Add a new review", new_restaurant_review_path(@restaurant) %>
+<%= link_to "Back to all restaurants", restaurants_path %>
